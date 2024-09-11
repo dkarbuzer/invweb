@@ -136,10 +136,11 @@ body {
   padding: 3% 5%;
   /* width: 60%; */
   /* height: 6vmax; */
-  font-family: "Zantiqa", sans-serif;
+  font-family: "Large", sans-serif;
 
   font-size: 3vmax;
   text-transform: uppercase;
+  border-radius: 1vh;
   
   color: white;
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.174);
@@ -149,5 +150,27 @@ body {
 
 .hidden {
   opacity: 0.3;
+}
+.game-button:hover {
+  background: linear-gradient(#1e2261 0%, #262c7d 100%);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Эффект при нажатии */
+.game-button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Анимация при загрузке */
+@keyframes glow {
+  0% { text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); }
+  50% { text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7); }
+  100% { text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); }
+}
+
+.game-button {
+  animation: glow 1.5s infinite alternate;
 }
   

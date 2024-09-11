@@ -47,7 +47,7 @@ body {
   margin-bottom: 5px;
 }
   
-.bot-name p {
+.bot-name a {
   display: inline;
   color: #59d2f4;
   font-family: "Libre Franklin", sans-serif;
@@ -55,6 +55,8 @@ body {
   /* font-size: 5.2vmin; */
   font-size: 120%;
   letter-spacing: 1px;
+  text-shadow: 0 0 9px rgba(89, 210, 244, 0.6); /* Легкое свечение текста */
+  animation: glow 1.5s ease-in-out infinite; /* Применяет анимацию свечения */
 }
   
 .tg-icon {
@@ -200,8 +202,8 @@ body {
 }
   
 .game-button {
-  background-color: #1e2261;
-  background: linear-gradient(#1e2261 0% 85%, #262c7d 96% 100%);
+  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(#262c7d 0%, #1e2261 100%);
   border: none;
   width: 70%;
   height: 6vmax;
@@ -217,5 +219,28 @@ body {
   color: white;
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.174);
   transition: transform 0.3s ease;
+  border-radius: 2vh;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
-  
+.game-button:hover {
+  background: linear-gradient(#1e2261 0%, #262c7d 100%);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Эффект при нажатии */
+.game-button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Анимация при загрузке */
+@keyframes glow {
+  0% { text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); }
+  50% { text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7); }
+  100% { text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); }
+}
+
+.game-button {
+  animation: glow 1.5s infinite alternate;
+}
