@@ -19,7 +19,7 @@ function getRandomFloat(min, max, decimals) {
 buttonGetSignal.onclick = function() {
     clickSoundEffect.play();
 
-    let receivingSignal = getRandomFloat(1.00, 3.99, 2);
+    let receivingSignal = getRandomFloat(1.20, 3.99, 2);
 
     if ((receivingSignal.toString().length == 3)) {
         receivingSignal += "0";
