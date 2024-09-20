@@ -68,7 +68,7 @@ buttonGetSignal.onclick = function() {
   else { starsCount = 6; }
   
   const cells = document.querySelectorAll('.cell');
-  const duration = 700; // Время между заменой клетки на звёздочку
+  const duration = 800; // Время между заменой клетки на звёздочку
 
   let selectedCells = Array.from(cells);
   for (let i = selectedCells.length - 1; i > 0; i--) {
