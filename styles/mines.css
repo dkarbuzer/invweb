@@ -97,7 +97,7 @@ body {
   aspect-ratio: 1;
   
   background-color: #238FA9;
-  border-radius: 10px;
+  border-radius: 9px;
   
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
